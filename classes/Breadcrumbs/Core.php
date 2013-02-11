@@ -17,7 +17,8 @@ class Breadcrumbs_Core {
 	 */
 	public static function add($text, $link = NULL)
 	{
-		self::$list[] = array('text' => $text, 'link' => $link);
+		if ($text)
+			self::$list[] = array('text' => $text, 'link' => $link);
 	}
 
 	public static function clear()
